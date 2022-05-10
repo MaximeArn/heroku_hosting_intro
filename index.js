@@ -8,6 +8,10 @@ express()
   .set("view engine", "ejs")
   .get("/", (req, res) => res.render("pages/index"))
   .listen(PORT, () => {
-    console.log("my own log !");
+    const logsNumber = 10;
+    const interval = 1000;
+    for (const i = 0; i < logsNumber; i++) {
+      setTimeout(() => console.log(`log ${logsNumber}`), interval);
+    }
     console.log(`Listening on ${PORT}`);
   });
