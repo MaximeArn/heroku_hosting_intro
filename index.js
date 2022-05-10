@@ -9,4 +9,5 @@ express()
   .get("/", (req, res) => res.render("pages/index"))
   .listen(PORT, () => {
     console.log(`Listening on ${PORT}`);
+    setTimeout(() => console.log("MY OWN LOG"), 5000);
   });
